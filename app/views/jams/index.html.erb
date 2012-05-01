@@ -1,0 +1,23 @@
+<h1>Welcome, friend.</h1>
+<% if @jams.empty?%>
+  <p>There is nothing here.</p>
+  <% else %>
+  <ol>
+    <% @jams.each do |jam| %>
+      <li>
+        <a href="http://localhost:3000/choons/<%= jam.name %>">
+          "<%= jam.name %>"
+        </a> |
+        <%= link_to "Edit",
+                    "http://localhost:3000/choons/#{jam.name}/edit" %>
+         |
+        <%= link_to "Delete",
+                    "http://localhost:3000/choons/#{jam.name}",
+                    :method => :delete,
+                    :confirm => "Last chance--are you sure?" %>
+      </li>
+      <% end %>
+  </ol>
+  <% end %>
+
+<a href="http://localhost:3000/choons/new"><h2>Add a new mix!</h2></a>

@@ -1,0 +1,15 @@
+<h1>Title:</h1>
+<p><h2><%= @jam.name %></h2></p>
+<p><h1>Artist:</h1>
+  <p><h2><%= @jam.artist %></h2></p>
+  
+   <%= link_to "Edit",
+                "http://localhost:3000/choons/#{@jam.name}/edit" %>
+     |
+    <%= link_to "Delete",
+                "http://localhost:3000/choons/#{@jam.name}",
+                :method => :delete,
+                :confirm => "Last chance--are you sure?" %>
+     |
+     <%= link_to "Return",
+                  "http://localhost:3000/choons"%>

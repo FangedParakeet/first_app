@@ -1,0 +1,9 @@
+<h1>Add a new track</h1>
+
+<%= form_tag "http://localhost:3000/choons", :method => "post" do %>
+  <%= label_tag "Title" %>
+  <%= text_field_tag "title" %>
+  <%= label_tag "Artist"%>
+  <%= text_field_tag "artist"%>
+  <%= submit_tag "Add to list"%>
+  <% end %>

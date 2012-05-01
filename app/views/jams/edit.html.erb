@@ -1,0 +1,9 @@
+<h1>Smack this bitch up</h1>
+
+<%= form_tag "http://localhost:3000/choons/#{@jam.name}", :method => "put" do %>
+  <%= label_tag "Title" %>
+  <%= text_field_tag("title", @jam.name) %>
+  <%= label_tag "Artist" %>
+  <%= text_field_tag "artist", @jam.artist %>
+  <%= submit_tag "Update"%>
+<% end %>
